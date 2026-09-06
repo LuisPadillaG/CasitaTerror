@@ -14,7 +14,7 @@ public class jugador : MonoBehaviour
     Vector3 escala;
 
     float velocidad_lineal;
-    float velocidad_lineal_diagonal;
+    //float velocidad_lineal_diagonal;
 
     // PREFAB
     //public GameObject prefabCubo;
@@ -40,7 +40,7 @@ public class jugador : MonoBehaviour
 
         // Velocidades
         velocidad_lineal = 3f;
-        velocidad_lineal_diagonal = 0.5f;
+        //velocidad_lineal_diagonal = 0.5f;
     }
 
 
