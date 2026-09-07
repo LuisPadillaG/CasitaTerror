@@ -3,7 +3,12 @@ guid: 31e3c215426a3294f881528f1c51636b
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cd.png
+    second: {fileID: 2100000, guid: 51c3b3342733b0b4d8360c68662bab48, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

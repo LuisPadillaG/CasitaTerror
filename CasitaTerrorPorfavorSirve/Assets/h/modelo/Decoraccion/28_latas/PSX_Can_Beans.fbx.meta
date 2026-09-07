@@ -3,7 +3,12 @@ guid: f7516970037fbbf4bb3c44deb451bb1b
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_PSXCans
+    second: {fileID: 2100000, guid: eac1bd441da5cdd428d71e31e1f95c3b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

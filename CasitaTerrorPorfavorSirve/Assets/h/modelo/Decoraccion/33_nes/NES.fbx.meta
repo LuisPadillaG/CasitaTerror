@@ -3,7 +3,12 @@ guid: a4d9a3752d5dc554eb8dc57185acdf9a
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NES 16-bit
+    second: {fileID: 2100000, guid: 181c788271a3481479cddd08c4d4f19d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

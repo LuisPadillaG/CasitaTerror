@@ -3,7 +3,37 @@ guid: b35b97e060627a44eb8e8ce9ec3bd651
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: desk_backMat
+    second: {fileID: 2100000, guid: 8be5c2b1975c9ae448bd357a3d2ea58d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: desk_deskMat
+    second: {fileID: 2100000, guid: 57de39e87121e8541a9a9df6fb07f0d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: desk_mirror_trimMat
+    second: {fileID: 2100000, guid: 1f98b406a7e23284b8a68c20ab11b8fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: desk_reflectMat
+    second: {fileID: 2100000, guid: c913efb1530cb3e4e8bdfb87b9715fd2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: desk_wire_black.001Mat
+    second: {fileID: 2100000, guid: 7f7a75b6148dad540bcfa833ef9126e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: desk_wire_whiteMat
+    second: {fileID: 2100000, guid: 198a4158cd3df60488b0f27dd31c1c2f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

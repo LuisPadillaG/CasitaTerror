@@ -3,7 +3,57 @@ guid: 9baf77c792476664ca248acf2c2435a4
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flat_10.75_ Dinnner Plate
+    second: {fileID: 2100000, guid: 3a76cdecef8270841ad612e99590bf78, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flat_10.75_ Serving Plate
+    second: {fileID: 2100000, guid: da703b5be562ab64eb8e931d48c67837, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flat_2.5_ Coffee Mug
+    second: {fileID: 2100000, guid: 127790d2c4067654b8010032d94c82f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flat_2.5_ Condiment Bowl
+    second: {fileID: 2100000, guid: 31b652179babbe044898fdd4a3cc9b74, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flat_2.5_ Tall Coffee Mug
+    second: {fileID: 2100000, guid: 2fb10d6edd88b3b4bb7a11c7408a01cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flat_2.5_ Tumbler
+    second: {fileID: 2100000, guid: 36eecd06e1485a64384ecca65d25eeba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flat_3.75_ Medium Bowl
+    second: {fileID: 2100000, guid: 7ec1ba211cf3ac74ab4e3a67a25179d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flat_6.0_ Bread Plate
+    second: {fileID: 2100000, guid: 3f9031b0b6756664096dbe2af5568fb8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flat_8.0_ Salad Plate
+    second: {fileID: 2100000, guid: 2c7830374ebbe634c87627879adb32d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flat_8.0_ Serving Bowl
+    second: {fileID: 2100000, guid: 7a024b235fe3c6a43b3f8864ce077d89, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

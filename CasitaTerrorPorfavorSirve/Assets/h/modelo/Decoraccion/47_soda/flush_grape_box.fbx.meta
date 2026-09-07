@@ -3,7 +3,12 @@ guid: 5caeb9f46c9c8d548ae0ee0b5d44df9c
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Soda Texture Atlas
+    second: {fileID: 2100000, guid: 8b69d59bd79a177409d6e61d7f9098f7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

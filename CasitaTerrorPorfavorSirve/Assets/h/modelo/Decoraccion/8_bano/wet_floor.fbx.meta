@@ -3,7 +3,12 @@ guid: 8dfdfa51a55aac94a84188df093d3136
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floor_sign
+    second: {fileID: 2100000, guid: cc46e2b52ce420244a59ed02a941eb69, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

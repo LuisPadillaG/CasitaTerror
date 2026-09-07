@@ -3,7 +3,12 @@ guid: 2d092baa1c610f84a84fda15e2ebea13
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Matte rat
+    second: {fileID: 2100000, guid: c67da798a68093148acfdda2561ad1c3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
