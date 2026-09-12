@@ -3,7 +3,22 @@ guid: b564ac71678be2f47a077c02334f19ba
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lamp-base
+    second: {fileID: 2100000, guid: 90b8092b35bdddb47aa4d65b68395396, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lamp-bulb
+    second: {fileID: 2100000, guid: c22470771f044df44abef4d6e094d225, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lamp-shade
+    second: {fileID: 2100000, guid: 74d702dc4b797ca4090fe8a08e904ebb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
