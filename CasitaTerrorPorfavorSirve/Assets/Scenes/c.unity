@@ -169831,7 +169831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &495885983285016316
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -169909,8 +169909,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_DefaultParameters:
-    m_ApertureSize: 0.7
-    m_FeatheringEffect: 0.2
+    m_ApertureSize: 0.9
+    m_FeatheringEffect: 0.112
     m_EaseInTime: 0.3
     m_EaseOutTime: 0.3
     m_EaseInTimeLock: 0
@@ -239684,7 +239684,7 @@ Transform:
   m_GameObject: {fileID: 4700782679266938511}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.00000035762784, z: -0, w: -1}
-  m_LocalPosition: {x: -102.64, y: 0.61, z: -9.662}
+  m_LocalPosition: {x: -102.64, y: -0.132, z: -9.662}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -239708,6 +239708,7 @@ GameObject:
   - component: {fileID: 446315715346459539}
   - component: {fileID: 1382686332087579331}
   - component: {fileID: 5093578835032510223}
+  - component: {fileID: 5093578835032510224}
   m_Layer: 2
   m_Name: XR Origin (XR Rig) Variant
   m_TagString: Player
@@ -243577,6 +243578,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05639a3e94b0ecb4e8f8f6190cf7452a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Jugador_Extras
+--- !u!114 &5093578835032510224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4700782679266938511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e27238dcff12c104995e32485c374185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FuncionesGenericas
+  a_camMovement: 1
+  playerInput: {fileID: 5486660998685658601}
+  objetivoMovimiento: {fileID: 6263361815458139121}
+  amplitud: 0.05
+  velocidad: 8
+  velocidadRetorno: 5
 --- !u!33 &5093779375932427845
 MeshFilter:
   m_ObjectHideFlags: 0
