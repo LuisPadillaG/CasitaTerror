@@ -6,6 +6,7 @@ TagManager:
   tags:
   - puerta_incorrecta
   - puerta_correcta
+  - rompible
   layers:
   - Default
   - TransparentFX

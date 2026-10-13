@@ -9,14 +9,14 @@ public class Jugador_Extras : MonoBehaviour
     {
         posicionJugador = this.transform.position;
         ultimaPuertaCorrecta = GameObject.FindWithTag("puerta_correcta").transform.position;
-        Debug.Log(ultimaPuertaCorrecta);
-        Debug.Log(posicionJugador);
+        //Debug.Log(ultimaPuertaCorrecta);
+        //Debug.Log(posicionJugador);
     }
     // Update is called once per frame
     void Update()
     {
         posicionJugador = this.transform.position;
-        Debug.Log(posicionJugador);
+        //Debug.Log(posicionJugador);
     }
     private void OnTriggerEnter(Collider other)
     {

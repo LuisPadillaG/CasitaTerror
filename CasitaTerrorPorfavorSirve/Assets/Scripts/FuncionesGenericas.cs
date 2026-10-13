@@ -5,7 +5,7 @@ public class FuncionesGenericas : MonoBehaviour
 {
     [Header("Jugador Opciones")]
     [SerializeField] bool a_camMovement = true;
-
+    [SerializeField] bool esObjetoDesaparacion = false;
     [Header("Referencias")]
     [SerializeField] PlayerInput playerInput;
     [SerializeField] Transform objetivoMovimiento; // Asigna 'Camera Offset' aquí
@@ -18,6 +18,8 @@ public class FuncionesGenericas : MonoBehaviour
     private Vector3 posicionOriginal;
     private float timer = 0f;
     private bool posicionGuardada = false;
+    //todo lo que desaparece 
+    bool sedesapareceraYayayay;
 
     void Start()
     {
@@ -30,6 +32,10 @@ public class FuncionesGenericas : MonoBehaviour
         if (a_camMovement && objetivoMovimiento != null)
         {
             CamMovement();
+        }
+        if (esObjetoDesaparacion && sedesapareceraYayayay == false)
+        {  
+            
         }
     }
 
@@ -80,5 +86,9 @@ public class FuncionesGenericas : MonoBehaviour
                 Time.deltaTime * velocidadRetorno
             );
         }
+    }
+    public void DesaparecerObjeto()
+    {
+        
     }
 }
