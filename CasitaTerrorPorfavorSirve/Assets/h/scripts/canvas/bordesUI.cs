@@ -3,6 +3,7 @@ using UnityEngine;
 public class bordesUI : MonoBehaviour
 {
     Camera mainCamera;
+    bool aparecer;
 
     void Start()
     {
@@ -13,7 +14,7 @@ public class bordesUI : MonoBehaviour
     {
         if (mainCamera != null)
         {
-            transform.LookAt(mainCamera.transform.position + mainCamera.transform.forward);
+            transform.LookAt(mainCamera.transform.position + mainCamera.transform.forward);//rotacion
         }
     }
 }

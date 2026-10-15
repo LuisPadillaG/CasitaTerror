@@ -11,8 +11,10 @@ public class Canvas_Agarrar : MonoBehaviour
     {
         imagenCanvas.SetActive(false);
 
+
+
         objetoAgarrable.selectEntered.AddListener(MostrarImagen);
-        objetoAgarrable.selectExited.AddListener(OcultarImagen);
+        objetoAgarrable.selectExited.AddListener(OcultarImagen);    
     }
 
     void MostrarImagen(SelectEnterEventArgs argumento)
