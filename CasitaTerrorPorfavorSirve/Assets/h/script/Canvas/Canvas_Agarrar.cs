@@ -4,9 +4,11 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class Canvas_Agarrar : MonoBehaviour
 {
+    /*
     public GameObject imagenCanvas;
     public XRGrabInteractable objetoAgarrable;
 
+    
     void Start()
     {
         imagenCanvas.SetActive(false);
@@ -32,6 +34,7 @@ public class Canvas_Agarrar : MonoBehaviour
         objetoAgarrable.selectEntered.RemoveListener(MostrarImagen);
         objetoAgarrable.selectExited.RemoveListener(OcultarImagen);
     }
+    */
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "rompible")
@@ -41,6 +44,7 @@ public class Canvas_Agarrar : MonoBehaviour
             rogo.constraints = RigidbodyConstraints.None;
             Destroy(other.gameObject, 1);
             Debug.Log("Lo logramos");
+            //destroy objeto
         }
     }
 }

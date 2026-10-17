@@ -7,6 +7,9 @@ TagManager:
   - puerta_incorrecta
   - puerta_correcta
   - rompible
+  - borrable
+  - teleport_bucle
+  - candado
   layers:
   - Default
   - TransparentFX

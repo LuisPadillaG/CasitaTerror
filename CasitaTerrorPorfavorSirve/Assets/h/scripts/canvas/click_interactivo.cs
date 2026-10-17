@@ -17,8 +17,9 @@ public class click_interactivo : MonoBehaviour
     Image imagen_letrero;//CanvasGroup imagen_letrero;
     Color color_imagen;
 
-    //float velocidad_difuminado;
-    bool aparecer;
+    
+    bool aparecer;//float velocidad_difuminado;
+    bool jugadorCerca;
     void Start()
     {
         Componentes();
@@ -30,7 +31,7 @@ public class click_interactivo : MonoBehaviour
     void Update()
     {
         //Rotacion_Cartelon();
-        Difuminar_Cartelon();
+        Difuminar_Imagen();
         //objetoAgarrable.selectEntered.AddListener(MostrarImagen);
         //objetoAgarrable.selectExited.AddListener(OcultarImagen);
     }
@@ -46,21 +47,21 @@ public class click_interactivo : MonoBehaviour
         objetoAgarrable.selectEntered.AddListener(MostrarImagen);
         objetoAgarrable.selectExited.AddListener(OcultarImagen);
         */
-       
+
     }
 
 
     void Valores()
     {
         aparecer = false;
-
+        jugadorCerca = false;
         //desaparesca - color
         color_imagen.a = 0;
         imagen_letrero.color = color_imagen; //imagen_letrero.alpha = 0;
     }
 
     //---------Funciones
-    void Difuminar_Cartelon()//aparecer
+    void Difuminar_Imagen()//aparecer
     {
         if (aparecer)
             color_imagen.a += Time.deltaTime * 2;//imagen_letrero.alpha += Time.deltaTime * 2;
@@ -95,6 +96,8 @@ public class click_interactivo : MonoBehaviour
     //        aparecer = false;
     //    }
     //}
+
+    /*
     public void ExplotarImagen()
     {
         click_interativo.SetActive(true);
@@ -103,30 +106,40 @@ public class click_interactivo : MonoBehaviour
     {
         click_interativo.SetActive(false);
     }
+
+    */
+
+    // --------- Agarrar y soltar ---------
+
+
+
     public void MostrarImagen(SelectEnterEventArgs argumento)
     {
         //imagen.SetActive(true);
-        aparecer = true;
+        aparecer = false;
     }
     public void OcultarImagen(SelectExitEventArgs argumento)
     {
         //imagen.SetActive(false);
-        aparecer = false;
+        //aparecer = false;
+        aparecer = jugadorCerca;
     }
+    /*
     void OnDestroy()
     {
         objetoAgarrable.selectEntered.RemoveListener(MostrarImagen);
         objetoAgarrable.selectExited.RemoveListener(OcultarImagen);
     }
-    
-
+    */
     private void OnTriggerEnter(Collider other)//aparecer
     {
-        objetoAgarrable.selectEntered.AddListener(MostrarImagen);
-        objetoAgarrable.selectExited.AddListener(OcultarImagen);
+        //objetoAgarrable.selectEntered.AddListener(MostrarImagen);
+        //objetoAgarrable.selectExited.AddListener(OcultarImagen);
         if (other.CompareTag("Player"))
         {
-            aparecer = true;//click_interativo.SetActive(true); 
+            //click_interativo.SetActive(true); 
+            jugadorCerca = true;
+            aparecer = !objetoAgarrable.isSelected;
         }
     }
 
@@ -134,12 +147,23 @@ public class click_interactivo : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            aparecer = false;//click_interativo.SetActive(false);
+            //aparecer = false;//click_interativo.SetActive(false);
+            jugadorCerca = false;
+            aparecer = false;
         }
 
-        objetoAgarrable.selectEntered.RemoveListener(MostrarImagen);
-        objetoAgarrable.selectExited.RemoveListener(OcultarImagen);
+        //objetoAgarrable.selectEntered.RemoveListener(MostrarImagen);
+        //objetoAgarrable.selectExited.RemoveListener(OcultarImagen);
     }
 
-
+    /*
+    void OnDestroy()
+    {
+        if (objetoAgarrable != null)
+        {
+            objetoAgarrable.selectEntered.RemoveListener(MostrarImagen);
+            objetoAgarrable.selectExited.RemoveListener(OcultarImagen);
+        }
+    }
+    */
 }
