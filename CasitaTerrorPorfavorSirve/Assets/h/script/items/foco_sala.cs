@@ -7,10 +7,14 @@ public class foco_sala : MonoBehaviour
     //public Light[] focos_tele;//tiene las mismas luces que foco
     bool subiendo1 = false;
 
-    //audio
+    //audio fx
     public AudioSource bocinas;
-    public AudioClip efecto;
+    public AudioClip efecto; // efecto
     bool audioReproducido = false;
+
+    public AudioClip sonido_estatico;  //sonido estatido
+    bool jugadorDentro = false;//cuando este afuera del rango
+
     void Start()
     {
         Componentes_Valores();
@@ -18,6 +22,7 @@ public class foco_sala : MonoBehaviour
     void Update()
     {
         televisor();
+        audioEstatica_volumen();
     }
 
     void Componentes_Valores()
@@ -31,32 +36,38 @@ public class foco_sala : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider other)
-    {
-        prendido(other);
-    }
+    /* ----- FUNCIONES  ------- */
 
-
-    void prendido(Collider other)//funcion (audio())
+    void prendido(Collider other)
     {
-        //focos
+        
         if (other.CompareTag("Player"))
         {
-            for (int i = 0; i < focos.Length; i++)//prender
+            jugadorDentro = true;
+
+            // Encender los focos
+            for (int i = 0; i < focos.Length; i++)
             {
-                focos[i].enabled = true;//focos_tele[i].enabled = true;
-                
+                focos[i].enabled = true;
+            }
+
+            
+
+            // estática
+            if (!bocinas.isPlaying)
+            {
+                audioEstatica();
             }
         }
-
-        //audio
-        if (audioReproducido == false)
+        // efecto una sola vez
+        if (!audioReproducido)
         {
             audio();
             audioReproducido = true;
         }
-
     }
+
+    //-------------- Tele sube y baja luz
 
     void televisor()
     {
@@ -87,10 +98,65 @@ public class foco_sala : MonoBehaviour
         
     }
 
-
+    //-------------- Audio solo una vez
     void audio()
     {
         bocinas.PlayOneShot(efecto);
     }
 
-}   
+
+    //-------------- Audio de estatica
+    void audioEstatica()
+    {
+        bocinas.clip = sonido_estatico;
+        bocinas.loop = true;
+        bocinas.volume = 0f;
+        bocinas.Play();
+    }
+        
+    void audioEstatica_volumen()//adentro y afuera audio
+    {
+
+        if (jugadorDentro) // Dentro
+        {
+            bocinas.volume += 0.5f * Time.deltaTime;
+
+            if (bocinas.volume > 0.5f)
+                bocinas.volume = 0.5f;
+        }
+        else // Fuera
+        {
+            bocinas.volume -= 0.1f * Time.deltaTime;
+
+            if (bocinas.volume < 0f)
+                bocinas.volume = 0f;
+
+            if (bocinas.volume == 0f && bocinas.isPlaying)
+                bocinas.Stop();
+        }
+    }
+
+    void audioEstatica_apagado(Collider other)//este solo apaga
+    {
+        if (other.CompareTag("Player"))
+        {
+            jugadorDentro = false;
+        }
+    }
+
+    /*--------------------------------------------*/
+    private void OnTriggerEnter(Collider other)
+    {
+        prendido(other);
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        audioEstatica_apagado(other);
+    }
+
+
+
+
+
+
+}

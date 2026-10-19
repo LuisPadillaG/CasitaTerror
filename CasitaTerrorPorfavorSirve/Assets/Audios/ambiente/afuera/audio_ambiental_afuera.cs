@@ -1,9 +1,13 @@
+
 using UnityEngine;
 
 public class audio_ambiental_afuera : MonoBehaviour
 {
     public AudioSource audioAmbiental;
     bool jugador_Dentro;
+
+    public float max_audio = 0.5f;//maximo
+    public float min_audio = 0.1f;//bajo 
 
     void Start()
     {
@@ -18,7 +22,7 @@ public class audio_ambiental_afuera : MonoBehaviour
 
     void Componentes()
     {
-        audioAmbiental.volume = 0.12f;
+        audioAmbiental.volume = 0f;
         audioAmbiental.Stop();
     }
 
@@ -31,42 +35,37 @@ public class audio_ambiental_afuera : MonoBehaviour
     {
         if (jugador_Dentro)//al entrar
         {
-            audioAmbiental.volume += 0.05f * Time.deltaTime;
+            if (!audioAmbiental.isPlaying)
+                audioAmbiental.Play();
 
-            if (audioAmbiental.volume > 0.5f)
-                audioAmbiental.volume = 0.5f;
+            audioAmbiental.volume += min_audio * Time.deltaTime;
+
+            if (audioAmbiental.volume > max_audio)
+                audioAmbiental.volume = max_audio;
 
         }
         else//afuera
         {
-            audioAmbiental.volume -= 0.1f * Time.deltaTime;
+            audioAmbiental.volume -= min_audio * Time.deltaTime;
 
             if (audioAmbiental.volume < 0f)
                 audioAmbiental.volume = 0f;
 
-            if (audioAmbiental.volume == 0f)
+            if (audioAmbiental.volume == 0f && audioAmbiental.isPlaying)
                 audioAmbiental.Stop();
         }
-
-
     }
 
 
     void OnTriggerEnter(Collider otro)
     {
         if (otro.CompareTag("Player"))
-        {
-            jugador_Dentro = true;
-            audioAmbiental.volume = 0.12f;
-            audioAmbiental.Play();
-        }
+        { jugador_Dentro = true;}
     }
 
     void OnTriggerExit(Collider otro)
     {
         if (otro.CompareTag("Player"))
-        {
-            jugador_Dentro = false;
-        }
+        {jugador_Dentro = false; }
     }
 }
