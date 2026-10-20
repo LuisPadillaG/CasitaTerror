@@ -111,7 +111,7 @@ public class foco_sala : MonoBehaviour
         bocinas.clip = sonido_estatico;
         bocinas.loop = true;
         bocinas.volume = 0f;
-        bocinas.Play();
+        //bocinas.Play();
     }
         
     void audioEstatica_volumen()//adentro y afuera audio
