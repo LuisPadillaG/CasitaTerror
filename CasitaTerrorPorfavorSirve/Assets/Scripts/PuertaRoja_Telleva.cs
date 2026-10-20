@@ -1,32 +1,31 @@
+
 using UnityEngine;
 
 public class PuertaRoja_Telleva : MonoBehaviour
 {
-    private Vector3 posicionUbicacionPuertaRoja;
-    GameObject player;
+    Vector3 posicionUbicacionPuertaRoja;
 
-    /*
     void Start()
     {
-
-        GameObject puertaRoja = GameObject.Find("puertaRoja");
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        GameObject puertaRoja = GameObject.Find("Puerta_Roja_final");
 
         if (puertaRoja != null)
-        {posicionUbicacionPuertaRoja = puertaRoja.transform.position;}
+        {
+            posicionUbicacionPuertaRoja = puertaRoja.transform.position;
+        }
         else
-        { Debug.LogError("No se encontró el objeto 'puertaRoja' en la escena. Revisa el nombre."); }
+        {
+            Debug.LogError("No se encontró la puerta roja.");
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("teleport_puertaRoja"))
+        if (other.CompareTag("Player"))
         {
             other.transform.position = posicionUbicacionPuertaRoja;
-            player = puertaRoja.transform.position;
-        }
-        Debug.Log("¡Teletransporte exitoso!");
+
+            Debug.Log("¡Teletransporte exitoso!");
         }
     }
-    */
 }
