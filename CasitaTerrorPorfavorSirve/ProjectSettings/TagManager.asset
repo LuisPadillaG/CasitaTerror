@@ -11,6 +11,7 @@ TagManager:
   - teleport_bucle
   - candado
   - teleport_puertaRoja
+  - Enemigo
   layers:
   - Default
   - TransparentFX

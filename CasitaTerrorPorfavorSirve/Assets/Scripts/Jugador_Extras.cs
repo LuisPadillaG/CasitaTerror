@@ -10,6 +10,7 @@ public class Jugador_Extras : MonoBehaviour
     {
         posicionJugador = this.transform.position;
         ultimaPuertaCorrecta = GameObject.FindWithTag("puerta_correcta").transform.position;
+        posicionUbicacionLLave = GameObject.FindWithTag("UbicacionLlave").transform.position;
         Debug.Log(ultimaPuertaCorrecta);
         Debug.Log(posicionJugador);
     }
