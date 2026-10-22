@@ -8332,7 +8332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.08176088, g: 0.08176088, b: 0.08176088, a: 1}
+  m_Color: {r: 0.09784025, g: 0.106918216, b: 0.09893587, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
