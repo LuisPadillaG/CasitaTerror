@@ -13881,6 +13881,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 673847080}
+  - component: {fileID: 673847081}
   m_Layer: 0
   m_Name: "\u25CB --- Character --- \u25CB "
   m_TagString: Untagged
@@ -13908,6 +13909,18 @@ Transform:
   - {fileID: 1002121615}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &673847081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673847079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d1e9a66baec724895b34406f252f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LanzadorJuegoPCVR
 --- !u!1 &684123501
 GameObject:
   m_ObjectHideFlags: 0
@@ -181346,7 +181359,6 @@ GameObject:
   - component: {fileID: 1382686332087579331}
   - component: {fileID: 5093578835032510223}
   - component: {fileID: 5093578835032510224}
-  - component: {fileID: 5093578835032510225}
   - component: {fileID: 5093578835032510226}
   m_Layer: 2
   m_Name: XR Origin (XR Rig) Variant
@@ -193331,22 +193343,6 @@ MonoBehaviour:
   amplitud: 0.05
   velocidad: 8
   velocidadRetorno: 5
---- !u!114 &5093578835032510225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4700782679266938511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c439880d7d8a2344a924bdb8343f22f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LanzadorJuegoPCVR
-  destino: 1
-  regresarConYIzquierda: 1
-  esperaLiberarXR: 0.8
-  esperaConfirmarProceso: 1.5
 --- !u!114 &5093578835032510226
 MonoBehaviour:
   m_ObjectHideFlags: 0
